@@ -7,6 +7,8 @@ let btn=document.querySelector('#confirm')
 let mov=document.querySelector('#movie')
 let amount=JSON.parse(localStorage.getItem('amount'))
 let movie=JSON.parse(localStorage.getItem('movie'))
+let wallet=document.querySelector('#wallet')
+wallet.innerText=amount
 btn.addEventListener(`click`,()=>{
     if(user_name=='') alert('Enter your name')
     else{
