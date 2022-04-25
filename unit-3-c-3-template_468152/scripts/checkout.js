@@ -11,13 +11,15 @@ let wallet=document.querySelector('#wallet')
 wallet.innerText=amount
 btn.addEventListener(`click`,()=>{
     if(user_name=='') alert('Enter your name')
+    
     else{
-amount=Number(amount)
-let charge=100*Number(seats.value)
-if(charge>amount){
-    alert('Insufficient Balance !')
-}else{
-    amount-=charge
+        amount=Number(amount)
+        let charge=100*Number(seats.value)
+        if(charge>amount){
+            alert('Insufficient Balance !')
+        }else{
+            amount-=charge
+            wallet.innerText=amount
     localStorage.setItem('amount',amount)   
     alert('Booking Successful!')
    

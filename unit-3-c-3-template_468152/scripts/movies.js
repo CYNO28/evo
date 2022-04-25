@@ -6,7 +6,7 @@ let wallet=document.querySelector('#wallet')
 wallet.innerText=JSON.parse(localStorage.getItem('amount'))
 let m=document.querySelector('#search')
 async function getmovies(){
-    let url=`http://www.omdbapi.com/?apikey=21b260f7&s=${m.value}`
+    let url=`https://www.omdbapi.com/?apikey=21b260f7&s=${m.value}`
     let res= await fetch(url)
     let data= await res.json()
     console.log(data)
